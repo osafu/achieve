@@ -55,6 +55,11 @@ group :development do
   gem 'letter_opener_web'
 end
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'better_errors'
+end
+
 gem 'rails_admin'
 
 gem 'cancan'
