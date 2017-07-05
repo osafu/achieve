@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="wrapper poem-contents col-md-8 col-md-offset-2 col-sm-10">
+    <h1>ポエム一覧</h1>
+    <section class="poems">
+
+      <% @poems.each do |poem| %>
+
+      <article class="row row-poems">
+        <p class="poem-list poem-list-title"><%= poem.title %></p>
+        <p class="poem-list poem-list-content"><%= poem.content %></p>
+        <p class="poem-list poem-list-show"><%= link_to '詳細をみる', poem, class: "btn btn-sm btn-success" %></p>
+      </article>
+      <% end %>
+
+    </section>
+  </div>
+</div>

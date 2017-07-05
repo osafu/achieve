@@ -1,0 +1,21 @@
+.poem-contents{
+  h1{
+    margin-bottom: 40px;
+  }
+  .row-poems {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    .poem-list-title{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .poem-list-content{
+      margin-bottom: 20px;
+    }
+  }
+  .row-poems-show{
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="wrapper poem-contents col-md-8 col-md-offset-2 col-sm-10">
+    <h1>ポエム詳細</h1>
+    <section class="row row-poems row-poems-show">
+      <p class="poem-list poem-list-title"><%= @poems.title %></p>
+      <p class="poem-list poem-list-content"><%= @poems.content %></p>
+      <p class="poem-list poem-list-back"><%= link_to "一覧へ戻る", poems_path, class: "btn btn-default btn-sm" %></p>
+    </section>
+  </div>
+</div>
