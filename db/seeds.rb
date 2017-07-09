@@ -6,8 +6,6 @@ Faker::Config.locale = :ja
   name = Faker::Name.name
   uid = Faker::Number.unique.number(5)
   provider = ""
-  avatar = ""
-  image_url = "no_image.png"
 
   User.create!(
                 name: name,
@@ -16,10 +14,7 @@ Faker::Config.locale = :ja
                 password_confirmation: password,
                 uid: uid,
                 provider: provider,
-                avatar: avatar,
-                image_url: image_url
               )
-
 end
 
 100.times do |n|
