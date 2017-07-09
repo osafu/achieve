@@ -4,8 +4,9 @@ Faker::Config.locale = :ja
   email = Faker::Internet.email
   password = "password"
   name = Faker::Name.name
-  avatar = ""
+  uid = Faker::Number.unique
   provider = ""
+  avatar = ""
   image_url = "no_image.png"
 
   User.create!(
@@ -13,7 +14,9 @@ Faker::Config.locale = :ja
                 email: email,
                 password: password,
                 password_confirmation: password,
+                uid: uid,
                 provider: provider,
+                avatar: avatar,
                 image_url: image_url
               )
 
