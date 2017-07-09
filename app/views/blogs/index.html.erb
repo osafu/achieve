@@ -11,7 +11,8 @@
 
       <%= blog.content %>
       <div class="user-info">
-        <p class="user-info-content user-info-content-avatar"><%= image_tag blog.user.image_url %></p>
+
+        <p class="user-info-content user-info-content-avatar"><%= profile_img(blog.user) %></p>
         <p class="user-info-content user-info-content-name"><span class="name"><%= blog.user.name %></span></p>
       </div>
 
