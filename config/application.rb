@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Achieve
   class Application < Rails::Application
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -22,9 +24,9 @@ module Achieve
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    
+
     config.action_view.field_error_proc = proc { |html_tag, instance| html_tag }
-    
-    
+
+
   end
 end

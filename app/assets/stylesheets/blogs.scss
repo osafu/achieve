@@ -17,8 +17,18 @@ input[type="submit"].btn-block{
   padding-bottom: 85px;
 }
 
-.user-name-wrap {
+.user-info {
     color: #888;
     margin: 1em 0;
     font-size: 13px;
+}
+
+.user-info-content{
+  display: inline-block;
+}
+
+.user-info-content-avatar img{
+  width: 24px;
+  border-radius: 50%;
+  margin-top: -2px;
 }
