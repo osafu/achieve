@@ -11,6 +11,17 @@
         <%= @blog.created_at.strftime("%y/%m/%d %p %l:%M") %>
       </p>
     </div>
+
+    <div id="favorites_area">
+      <% unless @blog.user == current_user %>
+        <% if @favorite.present? %>
+          <%= button_to 'お気に入り解除する', favorite_path, { params: { blog_id: @blog.id }, method: :delete, :remote => true, class: 'btn btn-default'} %>
+        <% else %>
+          <%= button_to 'お気に入りする', favorites_path, { params: { blog_id: @blog.id }, class: 'btn btn-info'} %>
+        <% end %>
+      <% end %>
+    </div>
+
     <p>コメント一覧</p>
     <div id="comments_area">
       <%= render partial: 'comments/index', locals: { comments: @comments, blog: @blog } %>

@@ -9,6 +9,7 @@ class BlogsController < ApplicationController
   def show
     @comment = @blog.comments.build
     @comments = @blog.comments
+    @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
   def new
