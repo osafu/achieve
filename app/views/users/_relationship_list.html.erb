@@ -1,0 +1,29 @@
+<div class="relationships row">
+
+  <div class="followed col-md-offset-2 col-md-3 col-sm-12">
+     <h4 class="followed-title">フォロー</h4>
+     <ul class="relationship-list">
+        <% @user.followed_users.each do |user| %>
+        <li class="relationship-info">
+          <p class="user-avator"><%= profile_img(user) %></p>
+          <p class="user-name"><%= user.name %></p>
+          <%= render 'follow_form', user: user %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="followers col-md-offset-2 col-md-3 col-sm-12">
+    <h4 class="followers-title">フォロワー</h4>
+    <ul class="relationship-list">
+      <% @user.followers.each do |user| %>
+        <li class="relationship-info">
+          <p class="user-avator"><%= profile_img(user) %></p>
+          <p class="user-name"><%= user.name %></p>
+          <%= render 'follow_form', user: user %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
