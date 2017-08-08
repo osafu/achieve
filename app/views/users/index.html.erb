@@ -4,7 +4,9 @@
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
         <%= profile_img(user) %>
         <%= user.name %>
-        <%= render 'follow_form', user: user %>
+        <% if user.id != current_user.id %>
+          <%= render 'follow_form', user: user %>
+        <% end %>
         <%= link_to '詳細', user_path(user), { :class => "btn-user-info btn btn-large btn-info" } %>
       </div>
   <% end %>
