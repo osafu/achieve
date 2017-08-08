@@ -1,3 +1,30 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2{
+  margin-bottom: 40px;
+}
+.followers,
+.followed{
+}
+
+.followers-title,
+.followed-title{
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: dotted 1px #333;
+}
+
+.relationship-list{
+  list-style: none;
+  .relationship-info{
+    margin-bottom: 30px;
+    .user-avator img{
+      width: 50px;
+    }
+    .user-name{
+      margin-bottom: 5px;
+    }
+  }
+}
