@@ -12,12 +12,9 @@
       <% end %>
       <%= blog.content %>
       <div class="user-info">
-
         <p class="user-info-content user-info-content-avatar"><%= profile_img(blog.user) %></p>
         <p class="user-info-content user-info-content-name"><span class="name"><%= blog.user.name %></span></p>
       </div>
-
-      <p><%= blog.content %></p>
       <%= link_to "編集", edit_blog_path(blog.id), class: 'btn btn-default btn-sm btn-success' %>
       <%= link_to "削除", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
     </div>

@@ -10,6 +10,9 @@ class BlogsController < ApplicationController
     @comment = @blog.comments.build
     @comments = @blog.comments
     @favorite = current_user.favorites.find_by(blog_id: @blog.id)
+
+    Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
+
   end
 
   def new

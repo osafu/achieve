@@ -1,0 +1,27 @@
+// Place all the styles related to the notifications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.notifications{
+  text-align: left;
+  list-style: none;
+}
+
+.notification-list{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #CCC;
+  .unread{
+    display: inline-block;
+    padding: 10px;
+    margin: 0 15px 5px 0;
+  }
+  .info-text{
+    margin-bottom: 5px;
+  }
+  .info-time{
+    color: #999;
+  }
+}
