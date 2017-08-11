@@ -9,11 +9,35 @@ header ul {
   list-style: none;
 }
 
-header ul a {
+header nav{
+  padding: 10px;
+}
+
+header nav a {
+  padding: 5px 15px;
   display: block;
-  padding: 15px;
   text-decoration: none;
   color: white;
+}
+
+.main-nav-menu{
+  display: table;
+  float: left;
+  text-align: left;
+}
+
+.main-nav-menu li{
+  display: table-cell;
+}
+
+.drop-nav{
+  padding: 0;
+  margin-left: 15px;
+}
+
+.navbar-brand{
+  padding: 5px;
+  margin-left: 15px;
 }
 
 header li {
